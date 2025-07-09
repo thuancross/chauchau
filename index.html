@@ -1,161 +1,226 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Đăng nhập Chocopie</title>
-    <!-- Bootstrap CSS đã nhúng -->
-    <style>
-        body {
-            min-height: 100vh;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Đăng nhập Chocopie</title>
+        <!-- Bootstrap CSS đã nhúng -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Labrada:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
 
-        .top-title {
-            padding-top: 32px;
-            margin-bottom: 24px;
-            text-align: center;
-            color: #222;
-        }
 
-        .login-title {
-            font-size: 2.4rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 0.2rem;
-        }
-
-        .login-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 0;
-        }
-
-        .login-container {
-            max-width: 350px;
-            margin: 0 auto;
-            padding: 0 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        form {
-            width: 100%;
-            text-align: center;
-        }
-
-        .form-control {
-            border-radius: 18px;
-            margin: 0.8rem auto;
-            font-size: 1.05rem;
-            padding: 0.7rem 1rem;
-            border: 1.2px solid #bcbcbc;
-            background: #f8f7f6;
-            max-width: 250px;
-            width: 250px;
-            /* Cố định width input */
-            display: block;
-        }
-
-        .form-control:focus {
-            border-color: #d9b1a3;
-            box-shadow: none;
-        }
-
-        .login-links {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            font-size: 0.98rem;
-            margin: 1rem 0 1.6rem;
-            color: #222;
-        }
-
-        .login-btn {
-            background: #d9b1a3;
-            color: #222;
-            border: none;
-            border-radius: 22px;
-            width: 100%;
-            padding: 0.7rem 0;
-            font-weight: 600;
-            font-size: 1.12rem;
-            margin-bottom: 2.2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: background 0.2s;
-            max-width: 200px;
-        }
-
-        .login-btn:hover {
-            background: #b97e6b;
-            color: #fff;
-        }
-
-        .choco-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 30px auto;
-        }
-
-        @media (max-width: 400px) {
-            .login-container {
-                max-width: 98vw;
-                padding: 0 2vw;
+            .josefin-sans-heading {
+                font-family: "Josefin Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
             }
-
-            .form-control {
-                width: 90vw;
-                max-width: 250px;
+            .josefin-sans-headingBolder {
+                font-family: "Josefin Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 800;
+                font-style: normal;
             }
-
-            .choco-img {
-                max-width: 95vw;
+            .labrada-heading {
+                font-family: "Labrada", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            body {
+                min-height: 100vh;
+                background-image: url('background-messege.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                font-family: 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0;
             }
 
             .top-title {
-                padding-top: 18px;
-                margin-bottom: 12px;
+                padding-top: 32px;
+                margin-bottom: 24px;
+                text-align: center;
+                color: #222;
             }
-        }
 
-        div.container {
-            padding-top: 50px;
-        }
+            .login-title {
+                margin-top: 330px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-bottom: 0.2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
 
-        a.link-demo {
-            color: black;
-            text-decoration: none;
-        }
-    </style>
-</head>
+            .login-subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
 
-<body>
-    <div class="container">
-        <div class="top-title">
-            <div class="login-title">ĐĂNG NHẬP</div>
-            <div class="login-subtitle">Welcome to Chocopie!</div>
+            .login-container {
+                max-width: 350px;
+                margin: 0 auto;
+                padding: 0 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form {
+                width: 100%;
+                text-align: center;
+            }
+
+            .form-control {
+                margin: 0.8rem auto;
+                font-size: 1.05rem;
+                padding: 0.7rem 1rem;
+                border: 1.2px solid #bcbcbc;
+                background: #f8f7f6;
+                max-width: 250px;
+                width: 250px;
+                /* Cố định width input */
+                display: block;
+            }
+
+            .form-control:focus {
+                border-color: #515151;
+                ;
+                box-shadow: none;
+            }
+
+            .login-links {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                font-size: 0.98rem;
+                margin: 1rem 0 1.6rem;
+                color: #222;
+            }
+
+            .login-btn {
+                background: #CF9A9A;
+                color: #222;
+                border: none;
+                border-radius: 22px;
+                width: 100%;
+                padding: 0.7rem 0;
+                font-weight: 600;
+                font-size: 1.12rem;
+                margin-bottom: 2.2rem;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                transition: background 0.2s;
+                max-width: 150px;
+                margin-top: 50px;
+            }
+
+            .login-btn:hover {
+                background: #b97e6b;
+                color: #fff;
+            }
+
+            .choco-img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto 30px auto;
+            }
+
+            @media (max-width: 400px) {
+                .login-container {
+                    max-width: 98vw;
+                    padding: 0 2vw;
+                }
+
+                .form-control {
+                    width: 90vw;
+                    max-width: 250px;
+                }
+
+                .choco-img {
+                    max-width: 95vw;
+                }
+
+                .top-title {
+                    padding-top: 18px;
+                    margin-bottom: 12px;
+                }
+            }
+
+            div.container {
+                padding-top: 50px;
+            }
+
+            a.link-demo {
+                color: black;
+                text-decoration: none;
+            }
+
+            .custom-input {
+                border: none;
+                border-bottom: 1.5px solid #555;
+                /* Gạch dưới đậm */
+                outline: none;
+                /* Chữ to */
+                background: transparent;
+                width: 100%;
+                color: #515151;
+            }
+
+            .custom-input::placeholder {
+                color: #515151;
+                /* Màu placeholder */
+            }
+            .custom-input {
+                border: none;
+                border-bottom: 1.5px solid #555;
+                outline: none;
+                color: #515151;
+                background: transparent;
+                width: 100%;
+                resize: none; /* Không cho kéo thủ công */
+                overflow: hidden; /* Ẩn thanh cuộn */
+                padding: 0 0; /* Chỉ padding trên dưới nhỏ thôi */
+            }
+
+            .custom-input::placeholder {
+                color: #515151;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="top-title">
+                <div class="login-title labrada-heading">Gửi lời nhắn đến người yêu&nbsp;thương của&nbsp;bạn ở đây nhé!</div>
+            </div>
+            <div class="login-container">
+                <form method="POST" action="<%=request.getContextPath()%>/getMessege">
+                    <input hidden name="username" value="${user.userName}" >
+                    <input hidden name="view" value="setMessege">
+                    <textarea class="form-control auto-expand custom-input josefin-sans-heading" placeholder="Nhập vào đây nè!" rows="1"></textarea>
+                    <button type="submit" class="login-btn josefin-sans-headingBolder">Gửi</button>
+                </form>
+            </div>
         </div>
-        <div class="login-container">
-            <form>
-                <input type="text" class="form-control" placeholder="Tên đăng nhập" />
-                <input type="password" class="form-control" placeholder="Mật khẩu" />
-                <div class="login-links">
-                    <a class="link-demo" href="#">Tạo tài khoản mới</a>
-                    <a class="link-demo" href="#">Quên mật khẩu?</a>
-                </div>
-                <button type="submit" class="login-btn">Đăng nhập</button>
-            </form>
-        </div>
-    </div>
+        <script>
+            const textarea = document.querySelector('.auto-expand');
+            textarea.addEventListener('input', () => {
+                textarea.style.height = 'auto';
+                textarea.style.height = textarea.scrollHeight + 'px';
+            });
+        </script>
 
-</body>
+    </body>
 
 </html>
