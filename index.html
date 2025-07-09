@@ -8,34 +8,41 @@
         <!-- Bootstrap CSS đã nhúng -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Labrada:ital,wght@0,100..900;1,100..900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Labrada:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Labrada:ital,wght@0,100..900;1,100..900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <style>
 
 
+
+            .libre-bodoni-subContent {
+                font-family: "Libre Bodoni", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .libre-bodoni-heading {
+                font-family: "Libre Bodoni", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .libre-bodoni-content {
+                font-family: "Libre Bodoni", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
             .josefin-sans-heading {
                 font-family: "Josefin Sans", sans-serif;
                 font-optical-sizing: auto;
                 font-weight: 400;
                 font-style: normal;
             }
-            .josefin-sans-headingBolder {
-                font-family: "Josefin Sans", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 800;
-                font-style: normal;
-            }
-            .labrada-heading {
-                font-family: "Labrada", serif;
-                font-optical-sizing: auto;
-                font-weight: 400;
-                font-style: normal;
-            }
             body {
                 min-height: 100vh;
-                background-image: url('background-messege.jpg');
+                background-image: url('background.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -52,17 +59,14 @@
             }
 
             .login-title {
-                margin-top: 330px;
-                font-size: 1.2rem;
+                font-size: 2rem;
                 font-weight: bold;
                 letter-spacing: 1px;
                 margin-bottom: 0.2rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
             }
 
             .login-subtitle {
-                font-size: 1.3rem;
+                font-size: 1.7rem;
                 margin-bottom: 0;
             }
 
@@ -81,11 +85,12 @@
             }
 
             .form-control {
+                border-radius: 18px;
                 margin: 0.8rem auto;
                 font-size: 1.05rem;
                 padding: 0.7rem 1rem;
-                border: 1.2px solid #bcbcbc;
-                background: #f8f7f6;
+                border: 1.2px solid black;
+                background: #F2F0EB;
                 max-width: 250px;
                 width: 250px;
                 /* Cố định width input */
@@ -93,8 +98,7 @@
             }
 
             .form-control:focus {
-                border-color: #515151;
-                ;
+                border-color: #d9b1a3;
                 box-shadow: none;
             }
 
@@ -119,8 +123,7 @@
                 margin-bottom: 2.2rem;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
                 transition: background 0.2s;
-                max-width: 150px;
-                margin-top: 50px;
+                max-width: 130px;
             }
 
             .login-btn:hover {
@@ -163,64 +166,30 @@
             a.link-demo {
                 color: black;
                 text-decoration: none;
+                font-size: smaller;
             }
-
-            .custom-input {
-                border: none;
-                border-bottom: 1.5px solid #555;
-                /* Gạch dưới đậm */
-                outline: none;
-                /* Chữ to */
-                background: transparent;
-                width: 100%;
-                color: #515151;
-            }
-
-            .custom-input::placeholder {
-                color: #515151;
-                /* Màu placeholder */
-            }
-            .custom-input {
-                border: none;
-                border-bottom: 1.5px solid #555;
-                outline: none;
-                color: #515151;
-                background: transparent;
-                width: 100%;
-                resize: none; /* Không cho kéo thủ công */
-                overflow: hidden; /* Ẩn thanh cuộn */
-                padding: 0 0; /* Chỉ padding trên dưới nhỏ thôi */
-            }
-
-            .custom-input::placeholder {
-                color: #515151;
-            }
-
         </style>
     </head>
 
     <body>
         <div class="container">
             <div class="top-title">
-                <div class="login-title labrada-heading">Gửi lời nhắn đến người yêu&nbsp;thương của&nbsp;bạn ở đây nhé!</div>
+                <div class="login-title libre-bodoni-heading">ĐĂNG NHẬP</div>
+                <div class="login-subtitle libre-bodoni-content">Welcome to Chocopie!</div>
             </div>
             <div class="login-container">
-                <form method="POST" action="<%=request.getContextPath()%>/getMessege">
-                    <input hidden name="username" value="${user.userName}" >
-                    <input hidden name="view" value="setMessege">
-                    <textarea style="padding-top: 15px;" class="form-control auto-expand custom-input josefin-sans-heading" placeholder="Nhập vào đây nè!" rows="1"></textarea>
-                    <button type="submit" class="login-btn josefin-sans-headingBolder">Gửi</button>
+                <form method="POST" action="<%=request.getContextPath()%>/messege">
+                    <input hidden value="view" name="view">
+
+                    <input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" />
+                    <input name="password" type="password" class="form-control" placeholder="Mật khẩu" />
+                    <div class="login-links">
+                        <a class="link-demo libre-bodoni-subContent" href="#">Tạo tài khoản mới</a>
+                        <a class="link-demo libre-bodoni-subContent" href="#">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="login-btn josefin-sans-heading">Đăng nhập</button>
                 </form>
             </div>
         </div>
-        <script>
-            const textarea = document.querySelector('.auto-expand');
-            textarea.addEventListener('input', () => {
-                textarea.style.height = 'auto';
-                textarea.style.height = textarea.scrollHeight + 'px';
-            });
-        </script>
-
     </body>
-
 </html>
