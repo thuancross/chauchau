@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get messege</title>
-    <!-- Bootstrap CSS đã nhúng -->
+    <title>Nhắn gửi yêu thương</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,31 +16,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Labrada:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
     <style>
         .josefin-sans-heading {
             font-family: "Josefin Sans", sans-serif;
             font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .josefin-sans-headingBolder {
-            font-family: "Josefin Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 800;
-            font-style: normal;
-        }
-
-        .labrada-heading {
-            font-family: "Labrada", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
+            font-weight: 300;
             font-style: normal;
         }
 
         body {
             min-height: 100vh;
-            background-image: url('background-messege.jpg');
+            background-image: url('recieve-messege-background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -49,67 +36,36 @@
             padding: 0;
         }
 
-        .top-title {
-            padding-top: 32px;
-            margin-bottom: 24px;
-            text-align: center;
-            color: #222;
+        .card {
+            background-color: rgba(255, 255, 255, 0.85);
         }
 
-        .login-title {
-            margin-top: 18em;
+        /* Đảm bảo chữ luôn đen */
+        .text-primary,
+        .card-body p,
+        .card-body input,
+        .card-body button,
+        .card-body .text-success {
+            color: #000 !important;
+        }
+
+        /* Tăng cảm giác “dễ chạm” cho nút trên mobile */
+        button.btn {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+        }
+
+        h1 {
+            margin-top: 5em;
             font-size: 1.2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 0.2rem;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-
-        .login-subtitle {
-            font-size: 1.3rem;
             margin-bottom: 0;
         }
 
-        .login-container {
-            max-width: 350px;
-            margin: 0 auto;
-            padding: 0 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        form {
-            width: 100%;
-            text-align: center;
-        }
-
-        .form-control {
-            margin: 0.8rem auto;
-            font-size: 1.05rem;
-            padding: 0.7rem 1rem;
-            border: 1.2px solid #bcbcbc;
-            background: #f8f7f6;
-            max-width: 250px;
-            width: 250px;
-            /* Cố định width input */
-            display: block;
-        }
-
-        .form-control:focus {
-            border-color: #515151;
-            ;
-            box-shadow: none;
-        }
-
-        .login-links {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            font-size: 0.98rem;
-            margin: 1rem 0 1.6rem;
-            color: #222;
+        .josefin-sans-heading {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .login-btn {
@@ -124,8 +80,7 @@
             margin-bottom: 2.2rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             transition: background 0.2s;
-            max-width: 150px;
-            margin-top: 50px;
+            max-width: 100px;
         }
 
         .login-btn:hover {
@@ -133,106 +88,52 @@
             color: #fff;
         }
 
-        .choco-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 30px auto;
+        .content-messege {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Cái này mới căn giữa theo trục cross axis */
         }
 
-        @media (max-width: 400px) {
-            .login-container {
-                max-width: 98vw;
-                padding: 0 2vw;
-            }
-
-            .form-control {
-                width: 90vw;
-                max-width: 250px;
-            }
-
-            .choco-img {
-                max-width: 95vw;
-            }
-
-            .top-title {
-                padding-top: 18px;
-                margin-bottom: 12px;
-            }
-        }
-
-        div.container {
-            padding-top: 50px;
-        }
-
-        a.link-demo {
-            color: black;
-            text-decoration: none;
-        }
-
-        .custom-input {
-            border: none;
-            border-bottom: 1.5px solid #555;
-            /* Gạch dưới đậm */
-            outline: none;
-            /* Chữ to */
-            background: transparent;
-            width: 100%;
-            color: #515151;
-        }
-
-        .custom-input::placeholder {
-            color: #515151;
-            /* Màu placeholder */
-        }
-
-        .custom-input {
-            border: none;
-            border-bottom: 1.5px solid #555;
-            outline: none;
-            color: #515151;
-            background: transparent;
-            width: 100%;
-            resize: none;
-            /* Không cho kéo thủ công */
-            overflow: hidden;
-            /* Ẩn thanh cuộn */
-            padding: 0 0;
-            /* Chỉ padding trên dưới nhỏ thôi */
-        }
-
-        .custom-input::placeholder {
-            color: #515151;
+        .messege-text {
+            max-width: 70%;
+            min-height: 300px;
+            line-height: 1;
+            display: flex;
+            /* biến p thành flex container */
+            align-items: center;
+            /* căn giữa dọc */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="top-title">
-            <div class="login-title labrada-heading">Gửi lời nhắn đến người yêu&nbsp;thương của&nbsp;bạn ở đây nhé!
-            </div>
+
+    <div class="container py-4">
+        <div class="text-center">
+            <h1 class="fw-bold text-primary">#GửiMộtMiếngThương</h1>
         </div>
-        <div class="login-container">
-            <form method="POST" action="<%=request.getContextPath()%>/getMessege">
-                <input hidden name="username" value="${user.userName}">
-                <input hidden name="view" value="setMessege">
-                <textarea required name="messege" style="padding-top: 15px;"
-                    class="form-control auto-expand custom-input josefin-sans-heading" placeholder="Nhập vào đây nè!"
-                    rows="1"></textarea>
-                <button style="max-width: 130px;" type="submit"
-                    class="login-btn josefin-sans-headingBolder">Gửi</button>
-            </form>
+        <div class="messege mb-3">
+            <div class="content-messege">
+                <p style="max-width: 70%; min-height: 300px; line-height: 1;"
+                    class="messege-text bimt-4 josefin-sans-heading text-lg-start">
+                    Hế lô bạn.
+                </p>
+            </div>
+            <div class="text-center">
+                <button style="background-color: #CF9A9A; font-size: small;" type="button"
+                    class="login-btn btn josefin-sans-heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-copy" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                    </svg>
+                    Copy
+                </button>
+            </div>
+
         </div>
     </div>
-    <script>
-        const textarea = document.querySelector('.auto-expand');
-        textarea.addEventListener('input', () => {
-            textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 'px';
-        });
-    </script>
-
 </body>
 
 </html>
